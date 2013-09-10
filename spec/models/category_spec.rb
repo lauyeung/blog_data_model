@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Category do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it { should have_valid(:tag).when('coding','weightlifting')}
+  it { should_not have_valid(:tag).when(nil,'')}
+
 end

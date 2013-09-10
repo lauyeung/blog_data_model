@@ -1,5 +1,12 @@
 require 'spec_helper'
 
 describe Categorization do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it { should have_valid(:entry_id).when(1, 5)}
+  it { should_not have_valid(:entry_id).when(nil,'')}
+
+  it { should have_valid(:category_id).when(1, 5)}
+  it { should_not have_valid(:category_id).when(nil,'')}
+
+
 end
